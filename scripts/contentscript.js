@@ -13,6 +13,7 @@ function onDomLoaded() {
   button.style = "margin-top: 15px";
   button.onclick = () => {
     console.log("Button clicked");
+    chrome.runtime.sendMessage({ action: "downloadZip" }, () => {});
   };
 
   let downloadIcon = document.createElement("div");
