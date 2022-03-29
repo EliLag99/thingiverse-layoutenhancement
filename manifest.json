@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Thingiverse Download Popup",
+  "version": "1.0",
+
+  "description": "Allows you to download a zip folder of all components",
+
+  "permissions": ["tabs", "scripting"],
+
+  "icons": {
+    "48": "icons/t-48.png",
+    "64": "icons/t-64.png",
+    "128": "icons/t-128.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.thingiverse.com/thing*"],
+      "js": ["scripts/contentscript.js"]
+    }
+  ]
+}
